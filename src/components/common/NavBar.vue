@@ -26,9 +26,10 @@ export default {
     margin-top: 10px;
     margin-left: 10px;
     color: #000;
-    font-family: 'Roboto', sans-serif;
+    /*font-family: 'Roboto', sans-serif;*/
     font-size: 30px;
     font-weight: bold;
+    font-family: "Segoe Script", cursive;
   }
   @keyframes blink {
     50% {

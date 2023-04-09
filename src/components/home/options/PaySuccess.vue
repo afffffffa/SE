@@ -3,7 +3,7 @@
   	<NavBar>
   		<div slot="nav-text"><p>支付成功</p></div>
   	</NavBar>
-    
+
     <div class="panel panel-default orderdoing">
       <div class="panel-body">
         <p class="up">制作中</p>
@@ -11,15 +11,12 @@
           <div class="doingimg">
             <img src="@/assets/img/logo/doing.png" alt="">
           </div>
-          <div class="doingtext">
-            <span>取单号</span>
-            <p>{{personnum}}</p>
-          </div>
+
         </div>
-        <p class="down">饮品现场制作中，请稍后。</p>
+
       </div>
     </div>
-    
+
     <div class="panel panel-default">
       <div class="panel-body order-info">
         <ul class="list-group">
@@ -54,11 +51,11 @@
         </span>
         <span>
           <p class="cleft">下单时间</p>
-          <p class="cright">2019年11月8日21:19:13</p>
+          <p class="cright">2023年4月1日21:19:13</p>
         </span>
         <span>
           <p class="cleft">门店地址</p>
-          <p class="cright">山东省淄博市张店区人民路与重庆路交汇处水晶街</p>
+          <p class="cright">南方科技大学湖畔餐厅</p>
         </span>
       </div>
     </div>
@@ -106,91 +103,128 @@ export default {
   }
 }
 </script>
-
 <style>
-  .panel {
-    width: 90%;
-    margin: 0 auto;
-    margin-bottom: 20px;
-  }
-  .orderdoing {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-  }
+.panel {
+  width: 90%;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  font-size: 20px;
+  font-family: Impact, sans-serif;
+  color: #333;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  padding: 20px;
+}
+.orderdoing {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
 
-  .up {
-    color: grey;
-  }
-  .center {
-    display: flex;
-    justify-content: space-around;
-    margin-bottom: 7px;
-  }
-  .doingimg img {
-    width: 55%;
-  }
-  .doingtext {
-    margin-top: 8px;
-  }
-  .doingtext span {
-    color: grey;
-  }
-  .doingtext p {
-    color: #ffb123;
-    font-size: 20px;
-    font-weight: bold;
-  }
-  .down {
-    color: #ffb123;
-  }
-  .item-info {
-    display: flex;
-    justify-content: space-between;
-  }
-  .item-info span {
-    
-  }
-  .itemname {
-    color: #101;
-    font-size: 14px;
-  }
-  .order-info li {
-    border: 0;
-  }
-  .item-money span {
-    display: flex;
-    justify-content: space-between;
-  }
-  .itemone {
-    font-size: 12px;
-    font-weight: lighter;
-    color: grey;
-  }
-  .finalmoney {
-    color: #000;
-    font-size: 20px;
-  }
-  
-  .caddress span {
-    color: grey;
-    font-size: 14px;
-  }
-  .cleft {
-    float: left;
-    margin-right: 6%;
-  }
+.up {
+  color: grey;
+  font-size: 16px;
+}
+.center {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 7px;
+}
+.doingimg img {
+  width: 55%;
+}
+.doingtext {
+  margin-top: 8px;
+  font-size: 24px;
+  text-align: center;
+}
+.doingtext span {
+  color: grey;
+  font-size: 18px;
+}
+.doingtext p {
+  color: #ffb123;
+  font-size: 36px;
+  font-weight: bold;
+  text-shadow: 2px 2px #333;
+  margin-top: 10px;
+}
+.down {
+  color: #ffb123;
+  font-size: 18px;
+  font-weight: bold;
+}
+.item-info {
+  display: flex;
+  justify-content: space-between;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+.item-info span {
 
-  .back {
-    clear: both;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-  }
-  .back button{
-    background-color: #ffb123;
-    width: 80%;
-    color: #fff;
-    font-weight: lighter;
-  }
+}
+.itemname {
+  color: #101;
+  font-size: 20px;
+  font-weight: bold;
+}
+.order-info li {
+  border: 0;
+}
+.item-money span {
+  display: flex;
+  justify-content: space-between;
+  font-size: 20px;
+  margin-top: 5px;
+}
+.itemone {
+  font-size: 16px;
+  font-weight: lighter;
+  color: grey;
+}
+.finalmoney {
+  color: #000;
+  font-size: 36px;
+  font-weight: bold;
+  margin-top: 20px;
+  text-align: right;
+}
+
+.caddress span {
+  color: grey;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.cleft {
+  float: left;
+  margin-right: 6%;
+}
+
+.back {
+  clear: both;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+.back button{
+  background-color: #ffb123;
+  width: 80%;
+  color: #fff;
+  font-weight: lighter;
+  font-size: 20px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.back button:hover {
+  background-color: #ff8c00;
+  box-shadow: 0 0 10px rgba(255, 177, 35, 0.5);
+}
 </style>

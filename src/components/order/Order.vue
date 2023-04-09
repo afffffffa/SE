@@ -3,21 +3,21 @@
     <NavBar style="font-family: Arial, sans-serif; background-color: #f5f5f5; color: #333;">
       <div slot="nav-text"><p style="font-weight: bold; font-size: 20px;">我的订单</p></div>
     </NavBar>
-    <div v-show="!haveorder">
-      <div class="panel panel-default myorder">
-        <div class="panel-body">
-          <p class="noinfo">暂无订单信息</p>
-        </div>
-      </div>
-      <div class="back">
-        <el-button class="backbtn" @click="goshop">开始点单</el-button>
-      </div>
-    </div>
+<!--    <div v-show="!haveorder">-->
+<!--      <div class="panel panel-default myorder">-->
+<!--        <div class="panel-body">-->
+<!--          <p class="noinfo">暂无订单信息</p>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--      <div class="back">-->
+<!--        <el-button class="backbtn" @click="goshop">开始点单</el-button>-->
+<!--      </div>-->
+<!--    </div>-->
 
     <br>
     <div>
       <!-- 有订单信息 -->
-      <div class="panel panel-default myorder" v-show="haveorder">
+      <div class="panel panel-default myorder" v-show="!haveorder">
         <div class="panel-body">
           <div class="div1">
             <p class="otime">下单时间 {{order.time}}</p>

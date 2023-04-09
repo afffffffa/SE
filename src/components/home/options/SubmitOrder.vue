@@ -2,11 +2,11 @@
   <div>
   	<NavBar>
      <div slot="nav-text" class="chos-nav"><span @click="backTo" class="glyphicon glyphicon-chevron-left">  </span><p>提交订单</p></div>
-    </NavBar> 
+    </NavBar>
 
     <ul class="list-group getime">
       <li class="list-group-item">
-        <p>取单时间</p>
+        <p>送餐最晚时间</p>
         <el-time-select
           v-model="timevalue"
           :picker-options="{
@@ -17,12 +17,25 @@
           placeholder="选择时间" class="timepicker">
         </el-time-select>
       </li>
+      <li class="list-group-item" onclick="editListItem(this)">
+        <p>取单地址(若不需要送货上门则不用更改)</p>
+        <input type="text" class="address" value="不选择送货上门">
+      </li>
       <li class="list-group-item">
-        <p>取单地址</p>
-        <span class="address">山东省淄博市张店区人民路与重庆路交汇处水晶街项目F商铺水晶街铺</span>
+        <p>取单地址(固定)</p>
+        <select class="address">
+          <option value="工学院一楼">工学院一楼</option>
+          <option value="商学院一楼">商学院一楼</option>
+          <option value="三教学一楼">三教学一楼</option>
+          <option value="湖畔三栋一楼">湖畔三栋一楼</option>
+          <option value="理学院一楼">理学院一楼</option>
+          <option value="荔园三栋">荔园三栋</option>
+          <option value="创园一栋">创园一栋</option>
+          <option value="欣园收发室">欣园收发室</option>
+        </select>
       </li>
     </ul>
-   
+
     <ul class="list-group order-info">
       <p>订单详情</p>
       <li v-for="item in order" class="list-group-item listyle">
@@ -38,10 +51,10 @@
       </li>
       <p class="order-money">￥{{totalmoney}}</p>
     </ul>
-    
+
     <!-- 优惠券 -->
     <span class="el-icon-s-ticket mydiscount"> 查看我的优惠券</span>
-    
+
     <!-- 备注 -->
     <el-input
       type="text"
@@ -119,11 +132,11 @@ export default {
     }
   },
   updated(){
-    
+
   },
   created(){
     this.getOrder();
-    
+
     this.getfinal();
   },
   components: {
@@ -145,7 +158,25 @@ export default {
     margin-left: 5px;
     font-size: 20px;
   }
-  
+  .list-group-item {
+    /*display: flex;*/
+    align-items: center;
+  }
+
+  .list-group-item p {
+    margin: 0;
+    width: 150px; /* 为了对齐，设置相同的宽度 */
+  }
+
+  .list-group-item .address {
+    flex: 1; /* 让文本框占据剩余的空间 */
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 16px;
+    margin-left: 20px;
+  }
+
   /*取单*/
   .getime li {
 
@@ -215,7 +246,7 @@ export default {
 
   .topay {
     width: 100%;
-    position: fixed;
+    /*position: fixed;*/
     bottom: 0;
     font-size: 20px;
   }

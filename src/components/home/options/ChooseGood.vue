@@ -8,7 +8,7 @@
       </NavBar>
     </div>
 <!--    图片+描述-->
-    <el-tabs :tab-position="tabPosition">
+    <el-tabs :tab-position="tabPosition"  class="custom-tabs">
       <el-tab-pane :label="index" v-for="(index,sort) in goodsort" class="navbaritem">
         <div v-for="good in goods" v-show="good.attribute == index" class="goodcards">
           <div class="imgdiv">
@@ -216,22 +216,22 @@ export default {
         this.goodscar.splice(id, 1);
 
         //显示也要减1
-        for(let i = 0; i < this.goods.length; i++) {
-          if(this.goods[i].teaName == item.teaName) {
-            this.goods[i].count--;
-          }
-        }
+        // for(let i = 0; i < this.goods.length; i++) {
+        //   if(this.goods[i].teaName == item.teaName) {
+        //     this.goods[i].count--;
+        //   }
+        // }
         return;
       }
       //不止一份 只减数量
       let id = this.goodscar.indexOf(item);
       this.totalmoney -= item.price;
       this.goodscar[id].count--;
-      for(let i = 0; i < this.goods.length; i++) {
-        if(this.goods[i].teaName == item.teaName) {
-          this.goods[i].count--;
-        }
-      }
+      // for(let i = 0; i < this.goods.length; i++) {
+      //   if(this.goods[i].teaName == item.teaName) {
+      //     this.goods[i].count--;
+      //   }
+      // }
     },
     add(good){
       this.nowgood = good;
@@ -250,11 +250,11 @@ export default {
       this.totalmoney += item.price;
 
       //显示也要加一
-      for(let i = 0; i < this.goods.length; i++) {
-        if(item.teaName == this.goods[i].teaName) {
-          this.goods[i].count++;
-        }
-      }
+      // for(let i = 0; i < this.goods.length; i++) {
+      //   if(item.teaName == this.goods[i].teaName) {
+      //     this.goods[i].count++;
+      //   }
+      // }
     },
     addtoMyar() {
       if(this.nowgood.count == 10) {
@@ -267,11 +267,11 @@ export default {
       temp.cupType = this.nowgood.cupType;
 
       let addmoney = 0;
-      for(let i = 0; i < this.addfood.length; i++){
-        if(this.charge == this.addfood[i].chargeName){
-          addmoney = this.addfood[i].price;
-        }
-      }
+      // for(let i = 0; i < this.addfood.length; i++){
+      //   if(this.charge == this.addfood[i].chargeName){
+      //     addmoney = this.addfood[i].price;
+      //   }
+      // }
 
       temp.price =  addmoney + this.nowgood.price;
       temp.count = 1;
@@ -285,24 +285,24 @@ export default {
       this.totalmoney += temp.price;
 
       //显示数量也加一
-      for(let i = 0; i < this.goods.length; i++) {
-        if(temp.teaName == this.goods[i].teaName) {
-          this.goods[i].count++;
-        }
-      }
+      // for(let i = 0; i < this.goods.length; i++) {
+      //   if(temp.teaName == this.goods[i].teaName) {
+      //     this.goods[i].count++;
+      //   }
+      // }
 
 
       let k = 0;
       let id = -1;
-      for(let i = 0; i < this.goodscar.length; i++) {
-        if(temp.teaName == this.goodscar[i].teaName) {
-          //商品名字一样，同时加的小料、温度、甜度都一样
-          if(temp.charge == this.goodscar[i].charge && temp.temperature == this.goodscar[i].temperature && temp.sugar == this.goodscar[i].sugar) {
-            k = 1;
-            id = i;
-          }
-        }
-      }
+      // for(let i = 0; i < this.goodscar.length; i++) {
+      //   if(temp.teaName == this.goodscar[i].teaName) {
+      //     //商品名字一样，同时加的小料、温度、甜度都一样
+      //     if(temp.charge == this.goodscar[i].charge && temp.temperature == this.goodscar[i].temperature && temp.sugar == this.goodscar[i].sugar) {
+      //       k = 1;
+      //       id = i;
+      //     }
+      //   }
+      // }
       if(k == 1) {
         //全都一样，只加个数
         this.goodscar[id].count++;
@@ -316,9 +316,9 @@ export default {
     },
     removeallevent(){
       this.goodscar = [];
-      for(let i = 0; i < this.goods.length; i++) {
-        this.goods[i].count = 0;
-      }
+      // for(let i = 0; i < this.goods.length; i++) {
+      //   this.goods[i].count = 0;
+      // }
       this.totalmoney = 0;
     },
     toast (str) {
@@ -377,30 +377,43 @@ export default {
     font-size: 20px;
   }
 
+  /* 设置标签字体大小为20像素 */
+  .el-tabs__item {
+    font-size: 20px !important;
+    color: red !important;
+  }
 
+
+
+  .custom-tabs  {
+    /*font-size: 22px;*/
+    font-family: "Segoe Script", cursive;
+  }
   /*每个商品卡片*/
   .goodcards {
+    /*font-size: px;*/
     width: 100%;
     display: flex;
     justify-content: space-between;
     margin-bottom: 5px;
   }
   .imgdiv {
-    width: 30%;
+    width: 50%;
   }
   /*商品图片*/
   .good-img {
-    width: 100%;
+    width: 50%;
   }
   /*商品名称*/
   .infodiv {
-    width: 30%;
+    font-size: 20px;
+    width:20%;
   }
   .good-name {
-    font-size: 15px;
+    font-size: 40px;
     font-weight: lighter;
     position: relative;
-    top: 8%;
+    top: 3%;
     left: 20%;
   }
   .typecup {
@@ -410,7 +423,7 @@ export default {
   }
   .good-price {
     color: #ffb663;
-    font-size: 10px;
+    font-size: 20px;
     font-weight: bold;
     position: relative;
     top: 1%;
@@ -422,9 +435,9 @@ export default {
   .daodiv {
     width: 40%;
     position: relative;
-    left: 16%;
+    left: 20%;
     top: 55px;
-    font-size: 16px;
+    font-size: 25px;
     color: #ffb872;
   }
   .removegood {
@@ -441,13 +454,13 @@ export default {
     bottom: 0;
     background-color: white;
     width: 100%;
-    height: 50px;
-    font-size: 17px;
+    height: 100px;
+    font-size: 20px;
     /*color: #ffb872;*/
     box-shadow: 10px 0 0 0 grey;
   }
   .glyphicon-shopping-cart {
-    font-size: 22px;
+    font-size: 30px;
     margin-left: 4px;
     margin-right: 5px;
   }
@@ -494,14 +507,16 @@ export default {
   }
 
    /*弹出的购物车物品*/
+  /*加购*/
   .showthecar {
     background-color: yellow;
-    width: 100%;
+    width: 40%;
     position: relative;
     bottom: 70px;
   }
+  /*购物车大小*/
   .modal-dialog {
-    width: 101%;
+    width: 40%;
     position: fixed;
     margin-left: -1px;
     bottom: -10px;
