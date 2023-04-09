@@ -50,13 +50,13 @@
               </el-radio-group>
             </div>
             <div>
-              <p>温度</p>
+              <p>辣度</p>
               <el-radio-group v-model="temperature">
                 <el-radio-button :label="city" v-for="city in warm"></el-radio-button>
               </el-radio-group>
             </div>
             <div>
-              <p>糖度</p>
+              <p>米饭量</p>
               <el-radio-group v-model="sugar">
                 <el-radio-button :label="city" v-for="city in candy"></el-radio-button>
               </el-radio-group>
@@ -164,9 +164,9 @@ export default {
 
       ],//小料 getaddinfos函数获取
       charge:[],//选择的小料，根据用户选择获取
-      warm:['热','温','常规冰','多冰','少冰','去冰'],//温度
+      warm:['微辣','不辣','中辣','狠辣','超级辣','无敌辣'],//温度
       temperature:'',
-      candy:['常规','半糖','微糖','无糖'],//甜度
+      candy:['半份米饭','一份米饭','两份米饭'],//甜度
       sugar:'',
       nowgood:''
     }

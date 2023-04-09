@@ -6,65 +6,58 @@
     <div class="cards-item">
       <ul id="myTab" class="nav nav-tabs">
         <li class="active">
-          <a href="#location" data-toggle="tab">定位附近门店 <span class="glyphicon glyphicon-search"></span></a>
+          <a href="#location" data-toggle="tab">所有食堂 <span class="glyphicon glyphicon-search"></span></a>
         </li>
-        <li>
-          <a href="#star" data-toggle="tab">收藏的门店 <span class="glyphicon glyphicon-star-empty"></span></a>
-        </li>
+
       </ul>
 
-      <div id="myTabContent" class="tab-content">
-        
-        <div class="tab-pane fade in active" id="location">
-          <Cards>
-           <span slot="shopName">CoCo都可(水晶街店)</span>
-           <span slot="shopDist">2.1KM</span>
-           <p slot="shopLocation">山东省淄博市张店区人民路与重庆路交汇处水晶街山东理工大学校区</p>
-           <span class="glyphicon glyphicon-heart-empty starshop" slot="ifstar"></span>
-          </Cards>
+      <div class="tab-pane fade in active" id="location">
+        <Cards>
+          <span slot="shopName">湖畔餐厅</span>
+          <span slot="shopDist">2.1KM</span>
+          <p slot="shopLocation">广东省深圳市南方科技大学湖畔餐厅</p>
+          <span class="glyphicon glyphicon-heart-empty starshop" slot="ifstar"></span>
+        </Cards>
 
-          <Cards>
-            <span slot="shopName">CoCo都可(小商品城店)</span>
-            <span slot="shopDist">2.1KM</span>
-            <p slot="shopLocation">山东省淄博市张店区华光路义乌小商品城</p>
-            <span class="glyphicon glyphicon-heart-empty starshop" slot="ifstar"></span>
-          </Cards>
+        <Cards>
+          <span slot="shopName">教师餐厅</span>
+          <span slot="shopDist">4.1KM</span>
+          <p slot="shopLocation">广东省深圳市南方科技大学教师餐厅</p>
+          <span class="glyphicon glyphicon-heart-empty starshop" slot="ifstar"></span>
+        </Cards>
 
-          <Cards>
-            <span slot="shopName">CoCo都可(小商品城店)</span>
-            <span slot="shopDist">2.1KM</span>
-            <p slot="shopLocation">山东省淄博市张店区华光路义乌小商品城</p>
-            <span class="glyphicon glyphicon-heart-empty starshop" slot="ifstar"></span>
-          </Cards>
+        <Cards>
+          <span slot="shopName">茶餐厅</span>
+          <span slot="shopDist">4.8KM</span>
+          <p slot="shopLocation">广东省深圳市南方科技大学茶餐厅</p>
+          <span class="glyphicon glyphicon-heart-empty starshop" slot="ifstar"></span>
+        </Cards>
 
-          <Cards>
-            <span slot="shopName">CoCo都可(小商品城店)</span>
-            <span slot="shopDist">2.1KM</span>
-            <p slot="shopLocation">山东省淄博市张店区华光路义乌小商品城</p>
-            <span class="glyphicon glyphicon-heart-empty starshop" slot="ifstar"></span>
-          </Cards>
+        <Cards>
+          <span slot="shopName">新生餐厅</span>
+          <span slot="shopDist">3.9KM</span>
+          <p slot="shopLocation">广东省深圳市南方科技大学新生餐厅</p>
+          <span class="glyphicon glyphicon-heart-empty starshop" slot="ifstar"></span>
+        </Cards>
 
-          <Cards>
-            <span slot="shopName">CoCo都可(小商品城店)</span>
-            <span slot="shopDist">2.1KM</span>
-            <p slot="shopLocation">山东省淄博市张店区华光路义乌小商品城</p>
-            <span class="glyphicon glyphicon-heart-empty starshop" slot="ifstar"></span>
-          </Cards>
-        </div>
-
-        <div class="tab-pane fade" id="star">
-          <div>
-            <Cards>
-              <span slot="shopName">CoCo都可(水晶街店)</span>
-              <span slot="shopDist">2.1KM</span>
-              <p slot="shopLocation">山东省淄博市张店区人民路与重庆路交汇处水晶街山东理工大学校区</p>
-              <span class="glyphicon glyphicon glyphicon-heart starshop" slot="ifstar"></span>
-            </Cards>
-          </div>
-        </div>
-
+        <Cards>
+          <span slot="shopName">荔园餐厅</span>
+          <span slot="shopDist">6.1KM</span>
+          <p slot="shopLocation">广东省深圳市南方科技大学荔园餐厅</p>
+          <span class="glyphicon glyphicon-heart-empty starshop" slot="ifstar"></span>
+        </Cards>
+        <Cards>
+          <span slot="shopName">欣园餐厅</span>
+          <span slot="shopDist">8.2KM</span>
+          <p slot="shopLocation">广东省深圳市南方科技大学欣园餐厅</p>
+          <span class="glyphicon glyphicon glyphicon-heart starshop" slot="ifstar"></span>
+        </Cards>
       </div>
+
+
     </div>
+
+  </div>
   </div>
 </template>
 
