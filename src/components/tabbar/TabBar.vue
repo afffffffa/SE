@@ -38,20 +38,19 @@ export default {
 		position: fixed;
 		left: 0;
 		right: 0;
-		bottom: 0;
+		bottom: 20px;
 		height: 49px;
 		font-size: 16px;
-    box-shadow: 0px 1px 1px rgba(100,100,100,0.1);
+    box-shadow: 0 1px 1px rgb(255, 255, 255);
     background-color: #fff;
 	}
 
 	img {
 		margin-bottom: 3px;
 		height: 24px;
-		height: 24px;
 	}
   .active-img {
-    margin-top: -5px;
+    margin-top: -20px;
     height: 32px;
     width: 32px;
   }

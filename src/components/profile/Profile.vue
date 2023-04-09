@@ -1,16 +1,18 @@
 <template>
   <div>
     <NavBar>
-  		<div slot="nav-text"><p>我的</p></div>
+  		<div slot="nav-text">
+        <p>Personal Center</p>
+      </div>
   	</NavBar>
   	<!-- <button v-on:click="getMsg">获取</button> -->
   	<div class="logo">
-      <img src="@/assets/img/logo/logo1.jpg"/>
+      <img src="@/assets/img/logo/logo.jpg" alt="Hello"/>
     </div>
     <div class="name">
-      <p>username</p>
+      <p>Luoying</p>
     </div>
-  
+
     <div class="list">
       <ul class="list-group">
         <router-link v-bind:to="'/mydiscount'">
@@ -49,6 +51,8 @@
     </div>
     <TabBar></TabBar>
   </div>
+
+
 </template>
 
 <script>
@@ -62,7 +66,7 @@ export default {
   data(){
   	return {
   		user:{
-        
+
       }
   	}
   },
@@ -79,7 +83,7 @@ export default {
     }
   },
   created(){
-    
+
   },
   computed: {
     phone(){
@@ -100,11 +104,11 @@ export default {
     display: flex;
     justify-content: center;
     position: relative;
-    top: 40px;
+    top: 30px;
   }
   .logo img {
-    width: 35%;
-    height: 35%;
+    width: 18%;
+    height: 28%;
     border-radius: 50%;
   }
   .name {
@@ -114,9 +118,9 @@ export default {
     position: relative;
     top: 40px;
   }
-  
+
   ul {
-    width: 90%;
+    width: 40%;
     margin: 0 auto;
     position: relative;
     top: 50px;
@@ -128,20 +132,23 @@ export default {
     font-weight: bold;
   }
   .center {
-    color: #000;
+    color: #000000;
   }
   .right {
     font-size: 20px;
     color: #ffb872;
     font-weight: bold;
     position: relative;
-    left: 65%;
+    left: 85%;
   }
 
   .quit {
-    width: 50%;
+    width: 40%;
     position: relative;
-    left: 25%;
+    left: 30%;
     margin-top: 60px;
+    font-size: 22px;
   }
+
+
 </style>
