@@ -6,6 +6,7 @@
      <NavBar>
        <div slot="nav-text" class="chos-nav"><span @click="backTo" class="glyphicon glyphicon-chevron-left">  </span><p>南方科技大学点餐页面</p></div>
       </NavBar>
+
     </div>
 <!--    图片+描述-->
     <el-tabs :tab-position="tabPosition"  class="custom-tabs">
