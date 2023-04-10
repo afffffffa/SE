@@ -6,6 +6,7 @@ const Order = () => import('@/components/order/Order')
 const Profile = () => import('@/components/profile/Profile')
 //购物有关的组件
 const ChooseShop = () => import('@/components/home/options/ChooseShop')
+const ChooseShopping= () => import('@/components/home/options/ChooseShopping')
 const ChooseGood = () => import('@/components/home/options/ChooseGood')
 const SubmitOrder = () => import('@/components/home/options/SubmitOrder')
 const Discount = () => import('@/components/home/options/Discount')
@@ -18,7 +19,7 @@ const MyDiscount = () => import('@/components/profile/MyDiscount')
 const History = () => import('@/components/profile/History')
 const Userinfo = () => import('@/components/profile/Userinfo')
 const Howuse = () => import('@/components/profile/Howuse')
-// 管理员界面
+// 商家界面
 const Admin = () => import('@/components/admin/Admin')
 const Index = () => import('@/components/admin/Index')
 //店铺管理
